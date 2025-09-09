@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" href="cgpa.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>CGPA Calculator</h1>
+      <p class="muted">Weighted by subject credits</p>
+    </header>
+
+    <div class="card panel">
+      <div class="toolbar">
+        <button id="addSubject" class="primary">+ Add Subject</button>
+        <button id="calculateCGPA" class="ghost">Calculate CGPA</button>
+      </div>
+
+      <table id="subjectTable">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Credits</th>
+            <th>Grade</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be added dynamically -->
+        </tbody>
+      </table>
+
+      <div class="stat">
+        <span>Your CGPA:</span>
+        <span id="cgpaValue" class="pill">0.00</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="cgpa.js"></script>
+</body>
+</html>
