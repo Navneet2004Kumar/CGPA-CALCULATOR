@@ -1,4 +1,4 @@
-// Grade to point mapping
+
 const gradePoints = {
   "O": 10,
   "A+": 9,
@@ -14,7 +14,7 @@ const addSubjectBtn = document.getElementById("addSubject");
 const calculateBtn = document.getElementById("calculateCGPA");
 const cgpaValue = document.getElementById("cgpaValue");
 
-// Add new subject row
+
 addSubjectBtn.addEventListener("click", () => {
   const row = document.createElement("tr");
 
@@ -35,7 +35,7 @@ addSubjectBtn.addEventListener("click", () => {
     <td><button class="removeBtn">❌</button></td>
   `;
 
-  // Add remove functionality
+  
   row.querySelector(".removeBtn").addEventListener("click", () => {
     row.remove();
   });
@@ -43,7 +43,7 @@ addSubjectBtn.addEventListener("click", () => {
   subjectTable.appendChild(row);
 });
 
-// Calculate CGPA
+
 calculateBtn.addEventListener("click", () => {
   let totalCredits = 0;
   let weightedSum = 0;
@@ -59,3 +59,4 @@ calculateBtn.addEventListener("click", () => {
   const cgpa = totalCredits > 0 ? (weightedSum / totalCredits).toFixed(2) : "0.00";
   cgpaValue.textContent = cgpa;
 });
+
